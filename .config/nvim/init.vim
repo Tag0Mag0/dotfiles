@@ -147,7 +147,7 @@ let g:deoplete#sources._ = ['buffer','tag']
 " }}}
 
 " Fuzzy Finder {{{
-set runtimepath+=~/.fzf
+set rtp+=/usr/local/opt/fzf
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
