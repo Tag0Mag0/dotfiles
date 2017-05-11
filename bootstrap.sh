@@ -25,3 +25,5 @@ else
 	fi;
 fi;
 unset doIt;
+
+/usr/local/opt/fzf/install

@@ -33,10 +33,12 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
+
 alias ber='bundle exec spring rspec'
 alias be='bundle exec'
 alias fcd='cd `find . -type d | fzf`'
 alias fgb='git checkout `git branch | fzf`'
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
