@@ -32,6 +32,14 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
+alias ber='bundle exec spring rspec'
+alias be='bundle exec'
+alias fcd='cd `find . -type d | fzf`'
+alias fgb='git checkout `git branch | fzf`'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	complete -o default -o nospace -F _git g;
