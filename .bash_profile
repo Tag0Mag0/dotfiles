@@ -33,6 +33,8 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
+# Add autojump for moving between directories. See https://github.com/wting/autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 alias ber='bundle exec spring rspec'
 alias be='bundle exec'
