@@ -58,11 +58,13 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
 
-  Plug 'mileszs/ack.vim'
-
   Plug 'flazz/vim-colorschemes'
 
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+  " Terminal tools
+  Plug 'vimlab/split-term.vim'
+
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
@@ -164,8 +166,7 @@ nnoremap <C-]> g<C-]>
 nnoremap <C-w><C-w> <C-w><C-p>
 nnoremap <C-w>\ :vertical resize 80<CR>
 command! FZFMru call fzf#run({'source': v:oldfiles, 'sink': 'e', 'options': '-m -x +s', 'down': '40%'})
-let g:ackprg = 'ag --nogroup --nocolor --column'
-map <Leader>a :Ack<Space>
+map <Leader>a :Ag<Space>
 
 set wildmode=longest,list:longest
 set wildignore+=tmp/ios,tmp/android,app/assets/images,public/assets,vendor/assets,bin/classes
